@@ -12,6 +12,8 @@ spec:
       labels:
         app: stress-test
     spec:
+      nodeSelector:  # Add this section
+        kubernetes.io/hostname: node8  # Specify the node name here
       containers:
       - name: stress-test
         image: stress-test:latest
